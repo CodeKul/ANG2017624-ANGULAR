@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CodekulComponent } from './codekul/codekul.component';
+import { AndroidComponent } from './android/android.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CodekulComponent,
+    AndroidComponent
   ],
   imports: [
     BrowserModule,
