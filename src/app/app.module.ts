@@ -6,12 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CodekulComponent } from './codekul/codekul.component';
 import { AndroidComponent } from './android/android.component';
+import { AngComponent } from './codekul/ang/ang.component';
+import { ThingsComponent } from './android/things.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CodekulComponent,
-    AndroidComponent
+    AndroidComponent,
+    AngComponent,
+    ThingsComponent
   ],
   imports: [
     BrowserModule,
