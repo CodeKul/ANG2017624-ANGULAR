@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Data Binding</h1>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Interpolation</h3>
+      <div>
+        Component Name = {{componentName}}
+      </div>
+      <div>
+        One + 1 = {{onePlusOne()}}
+      </div>
+      <div>
+        Conditions = {{onePlusOne()
+        < 1 ? "okay" : "good"}} </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Property Binding</h3>
+        <div><input type="{{something}}" value="okay"></div>
+        <div [style.border]="border"><input [type]="ipType" value="okay"></div>
+        <div>
+          <app-ip [add]="'In Mumbai'" [emp]="{name :'android', dsg:1233}"></app-ip>
+        </div>
+      </div>
+    </div>

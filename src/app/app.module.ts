@@ -8,6 +8,8 @@ import { CodekulComponent } from './codekul/codekul.component';
 import { AndroidComponent } from './android/android.component';
 import { AngComponent } from './codekul/ang/ang.component';
 import { ThingsComponent } from './android/things.component';
+import { DatabindingComponent } from './databinding/databinding.component';
+import { IpComponent } from './databinding/ip.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ThingsComponent } from './android/things.component';
     CodekulComponent,
     AndroidComponent,
     AngComponent,
-    ThingsComponent
+    ThingsComponent,
+    DatabindingComponent,
+    IpComponent
   ],
   imports: [
     BrowserModule,
