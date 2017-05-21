@@ -28,4 +28,10 @@
           <app-ip [add]="'In Mumbai'" [emp]="{name :'android', dsg:1233}"></app-ip>
         </div>
       </div>
+      <div class="row">
+      <div class="col-md-12">
+        <h3>Event Binding</h3>
+        <div><input type="button" value="okay" (click)="changeBorder()"></div>
+        <div><input type="text" [style.width]="dynaWd" (mouseenter)="dynaWd='300px'" (mouseleave)="dynaWd='200px'" ></div>
+      </div>
     </div>

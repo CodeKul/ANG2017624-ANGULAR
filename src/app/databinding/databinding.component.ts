@@ -10,6 +10,8 @@ export class DatabindingComponent {
   componentName: string;
   ipType: string;
   border: string;
+  dynaWd: string = "200px";
+
   constructor() {
     this.componentName = 'Android';
     this.ipType = 'button';
@@ -18,5 +20,9 @@ export class DatabindingComponent {
 
   onePlusOne() {
     return 1 + 1;
+  }
+
+  changeBorder() {
+    this.border = '1px solid blue';
   }
 }
