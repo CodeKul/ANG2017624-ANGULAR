@@ -12,7 +12,8 @@ export class DatabindingComponent {
   border: string;
   dynaWd: string = "200px";
   outData: string;
-
+  control : Control;
+  
   constructor() {
     this.componentName = 'Android';
     this.ipType = 'button';
@@ -30,4 +31,9 @@ export class DatabindingComponent {
   myData(dt: string) {
     this.outData = dt;
   }
+}
+
+export class Control {
+  control: string;
+  val: string;
 }

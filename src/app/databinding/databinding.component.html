@@ -38,4 +38,13 @@
           OutData is - {{outData}}
         </div>
       </div>
+      <div class="col-md-12">
+        <h3>Inter Component Communication</h3>
+        <div>
+          <app-former (formEv)="control=$event"> </app-former>
+        </div>
+        <div>
+          <app-grasper [ipCtl]="control"></app-grasper>
+        </div>
+      </div>
     </div>
