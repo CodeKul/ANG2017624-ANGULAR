@@ -11,6 +11,7 @@ export class DatabindingComponent {
   ipType: string;
   border: string;
   dynaWd: string = "200px";
+  outData: string;
 
   constructor() {
     this.componentName = 'Android';
@@ -24,5 +25,9 @@ export class DatabindingComponent {
 
   changeBorder() {
     this.border = '1px solid blue';
+  }
+
+  myData(dt: string) {
+    this.outData = dt;
   }
 }
