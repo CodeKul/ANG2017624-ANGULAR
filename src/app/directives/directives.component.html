@@ -11,9 +11,17 @@
         <input type="text" [ngStyle]="{'border': '1px solid '+ textColor}">
       </div>
       <div [ngClass]="{well : isWell}">
-        Android Codekul <input type="text" [(ngModel)]="textColor" > {{fullColor}} {{textColor}}
+        Android Codekul <input type="text" [(ngModel)]="textColor" >
       </div>
       <input type="button" value="Toggle" (click)="isWell = !isWell"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Custom Directives</h3>
+      <div>
+        <input type="text" resizer>
+      </div>
     </div>
   </div>
 </div>

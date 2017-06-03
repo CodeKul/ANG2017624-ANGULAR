@@ -17,6 +17,7 @@ import { ViewContentChildComponent } from './view-content-child/view-content-chi
 import { ViewChildComponent } from './view-content-child/view-child.component';
 import { ContentChildComponent } from './view-content-child/content-child.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { ResizerDirective } from './directives/resizer.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DirectivesComponent } from './directives/directives.component';
     ViewContentChildComponent,
     ViewChildComponent,
     ContentChildComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    ResizerDirective
   ],
   imports: [
     BrowserModule,
