@@ -15,6 +15,8 @@ import { FormerComponent } from './databinding/former.component';
 import { GrasperComponent } from './databinding/grasper.component';
 import { ViewContentChildComponent } from './view-content-child/view-content-child.component';
 import { ViewChildComponent } from './view-content-child/view-child.component';
+import { ContentChildComponent } from './view-content-child/content-child.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ViewChildComponent } from './view-content-child/view-child.component';
     FormerComponent,
     GrasperComponent,
     ViewContentChildComponent,
-    ViewChildComponent
+    ViewChildComponent,
+    ContentChildComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
