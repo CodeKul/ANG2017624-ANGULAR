@@ -47,4 +47,10 @@
           <app-grasper [ipCtl]="control"></app-grasper>
         </div>
       </div>
+
+       <div class="col-md-12">
+        <h3>Two Way Data Binding</h3>
+        <hr> 
+        <input type="text" [(ngModel)]="myName"/> {{myName}} 
+      </div>
     </div>

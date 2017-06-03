@@ -13,6 +13,8 @@ import { IpComponent } from './databinding/ip.component';
 import { OpComponent } from './databinding/op.component';
 import { FormerComponent } from './databinding/former.component';
 import { GrasperComponent } from './databinding/grasper.component';
+import { ViewContentChildComponent } from './view-content-child/view-content-child.component';
+import { ViewChildComponent } from './view-content-child/view-child.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { GrasperComponent } from './databinding/grasper.component';
     IpComponent,
     OpComponent,
     FormerComponent,
-    GrasperComponent
+    GrasperComponent,
+    ViewContentChildComponent,
+    ViewChildComponent
   ],
   imports: [
     BrowserModule,

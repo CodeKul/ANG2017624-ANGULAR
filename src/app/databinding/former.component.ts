@@ -28,7 +28,7 @@ export class FormerComponent implements OnInit {
   }
 
   form(which: number) {
-    if (which === 1) {
+    if (which == 1) {
       this.formEv.emit({ control: 'text', val: 'Ransomeware' });
     }
     else {
