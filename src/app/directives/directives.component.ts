@@ -6,7 +6,22 @@ import { Component, OnInit, OnChanges } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit {
-  constructor() { }
+
+  mobiles: string[];
+
+  constructor() {
+    this.mobiles = [];
+
+    this.mobiles.push('Samsung');
+    this.mobiles.push('Motorola');
+    this.mobiles.push('Apple');
+    this.mobiles.push('Microsoft');
+    this.mobiles.push('Rim');
+    this.mobiles.push('Lenevo');
+    this.mobiles.push('Dell');
+    this.mobiles.push('Nokia');
+  }
+
   ngOnInit() {
   }
 }

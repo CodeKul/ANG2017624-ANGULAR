@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1>Directives</h1><hr>
+      <h1>Directives</h1>
+      <hr>
     </div>
   </div>
   <div class="row">
@@ -11,9 +12,9 @@
         <input type="text" [ngStyle]="{'border': '1px solid '+ textColor}">
       </div>
       <div [ngClass]="{well : isWell}">
-        Android Codekul <input type="text" [(ngModel)]="textColor" >
+        Android Codekul <input type="text" [(ngModel)]="textColor">
       </div>
-      <input type="button" value="Toggle" (click)="isWell = !isWell"/>
+      <input type="button" value="Toggle" (click)="isWell = !isWell" />
     </div>
   </div>
   <div class="row">
@@ -27,4 +28,43 @@
       </div>
     </div>
   </div>
-</div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Stuctrual Directives</h3>
+      <hr>
+      <div>
+        <h3>*ngFor</h3>
+        <ul>
+          <li *ngFor="let xyz of mobiles;let pos = index;">{{xyz}} {{pos}}</li>
+        </ul>
+      </div>
+      <div>
+        <h3>*ngIf</h3>
+        <input type="text" *ngIf="isVisible; else elsBlk"> <input type="button" (click)="isVisible = !isVisible" class="btn btn-primary"
+          value="Show">
+        <ng-template #elsBlk>This is your else</ng-template>
+      </div>
+      <div>
+        <h3>*ngIf(Desugared)</h3>
+        <ng-template [ngIf]="isVisible">
+          <div>Desugared Version of *ngIf</div>
+        </ng-template>
+      </div>
+      <div>
+        <h3>*ngSwitch</h3>
+        <input type="button" value="One" (click)="myNum=1" class="btn btn-primary">
+        <input type="button" value="Two" (click)="myNum=2" class="btn btn-primary">
+        <input type="button" value="Three" (click)="myNum=3" class="btn btn-primary">
+        <div [ngSwitch]="myNum">
+          <div *ngSwitchCase="1">
+            <app-android></app-android>
+          </div>
+          <div *ngSwitchCase="2">Two</div>
+          <div *ngSwitchCase="3">Three</div>
+        </div>
+      </div>
+      <div>
+        <h3>Custom Structural Directive</h3>
+      </div>
+    </div>
+  </div>
