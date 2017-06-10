@@ -1,3 +1,4 @@
+import { RemoteService } from './services/remote.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -19,6 +20,9 @@ import { ContentChildComponent } from './view-content-child/content-child.compon
 import { DirectivesComponent } from './directives/directives.component';
 import { ResizerDirective } from './directives/resizer.directive';
 import { NoIfDirective } from './directives/no-if.directive';
+import { ServicesComponent } from './services/services.component';
+import { RemOneComponent } from './services/rem-one.component';
+import { RemTwoComponent } from './services/rem-two.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +41,17 @@ import { NoIfDirective } from './directives/no-if.directive';
     ContentChildComponent,
     DirectivesComponent,
     ResizerDirective,
-    NoIfDirective
+    NoIfDirective,
+    ServicesComponent,
+    RemOneComponent,
+    RemTwoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [RemoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
