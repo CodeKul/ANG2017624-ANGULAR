@@ -1,3 +1,4 @@
+import { WalletService } from './services/wallet.service';
 import { RemoteService } from './services/remote.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -23,6 +24,7 @@ import { NoIfDirective } from './directives/no-if.directive';
 import { ServicesComponent } from './services/services.component';
 import { RemOneComponent } from './services/rem-one.component';
 import { RemTwoComponent } from './services/rem-two.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -44,14 +46,15 @@ import { RemTwoComponent } from './services/rem-two.component';
     NoIfDirective,
     ServicesComponent,
     RemOneComponent,
-    RemTwoComponent
+    RemTwoComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [RemoteService],
+  providers: [RemoteService, WalletService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
     </div>
   `,
   styles: []
-  // providers: [RemoteService]
+  //  providers: [RemoteService]
 })
 export class RemOneComponent {
 
