@@ -25,6 +25,8 @@ import { ServicesComponent } from './services/services.component';
 import { RemOneComponent } from './services/rem-one.component';
 import { RemTwoComponent } from './services/rem-two.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { FormsComponent } from './forms/forms.component';
+import { TemplateComponent } from './forms/template.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     ServicesComponent,
     RemOneComponent,
     RemTwoComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    FormsComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
