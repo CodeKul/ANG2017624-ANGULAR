@@ -2,7 +2,7 @@ import { WalletService } from './services/wallet.service';
 import { RemoteService } from './services/remote.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -27,6 +27,7 @@ import { RemTwoComponent } from './services/rem-two.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { FormsComponent } from './forms/forms.component';
 import { TemplateComponent } from './forms/template.component';
+import { DataDrivenComponent } from './forms/data-driven.component';
 
 @NgModule({
   declarations: [
@@ -51,12 +52,14 @@ import { TemplateComponent } from './forms/template.component';
     RemTwoComponent,
     LifecycleComponent,
     FormsComponent,
-    TemplateComponent
+    TemplateComponent,
+    DataDrivenComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [RemoteService, WalletService],
   bootstrap: [AppComponent]

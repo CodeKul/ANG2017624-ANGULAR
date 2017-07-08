@@ -55,6 +55,15 @@
       </div>
     </div>
 
+     <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="city">Cities</label>
+      
+      <div *ngFor="let mob of mobiles">
+        <input type="radio" [value]="mob" name="mob" [(ngModel)]="myData.mob">{{mob}}
+      </div>
+    </div>
+
     <div class="control-group">
       <!-- Button -->
       <div class="controls">

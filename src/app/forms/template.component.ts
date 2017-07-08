@@ -12,8 +12,11 @@ export class TemplateComponent implements OnInit {
   myData = {
     userName: '',
     email: '',
-    password: ''
+    password: '',
+    mob: ''
   };
+
+  mobiles = ['Android', 'iOS', 'Windows', 'BB'];
   constructor() { }
 
   ngOnInit() {
