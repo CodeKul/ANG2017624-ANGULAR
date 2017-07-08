@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-data-driven',
@@ -13,9 +13,9 @@ export class DataDrivenComponent implements OnInit {
     private builder: FormBuilder
   ) {
     this.formGroup = builder.group({
-      usNm: '',
-      eml: '',
-      pwd: ''
+      usNm: ['', Validators.required],
+      eml: ['', Validators.compose([Validators.required, Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")])],
+      pwd: ['', Validators.compose([Validators.required, this.isPwdStartFromA()])]
     });
   }
 
@@ -24,5 +24,9 @@ export class DataDrivenComponent implements OnInit {
 
   onSubmit() {
     console.log(this.formGroup);
+  }
+
+  isPwdStartFromA(): ValidatorFn {
+    return (ct: AbstractControl) => ct.value.charAt(0) === 'a' ? { err: 'Starts from a' } : null;
   }
 }

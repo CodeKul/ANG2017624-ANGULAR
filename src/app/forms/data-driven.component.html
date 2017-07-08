@@ -13,7 +13,7 @@
           class="input-xlarge"
           formControlName="usNm">
 
-        <p class="help-block" >Username can contain any letters or numbers, without spaces</p>
+        <p class="help-block" *ngIf="formGroup.controls.usNm.invalid">Username can contain any letters or numbers, without spaces</p>
       </div>
     </div>
 
@@ -27,7 +27,7 @@
           class="input-xlarge"
           formControlName="eml">
 
-        <p class="help-block">Please provide your E-mail</p>
+        <p class="help-block" *ngIf="formGroup.controls.eml.invalid">Please provide your E-mail</p>
       </div>
     </div>
 
@@ -40,7 +40,7 @@
           placeholder="Password" 
           class="input-xlarge"
           formControlName="pwd">
-        <p class="help-block">Password should be at least 4 characters</p>
+        <p class="help-block" *ngIf="formGroup.controls.pwd.invalid">{{formGroup.controls.pwd.errors.err}}</p>
       </div>
     </div>
 
@@ -56,7 +56,7 @@
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <button type="submit" class="btn btn-success">Register</button>
+        <button [disabled]="formGroup.invalid" type="submit" class="btn btn-success">Register</button>
       </div>
     </div>
   </fieldset>
