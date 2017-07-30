@@ -1,0 +1,18 @@
+<div>
+  Money - {{money | currency:"$"}} Date - {{obj.dt | date:"dd MMM yyyy"}} Os - {{os | slice:2:4}}
+</div>
+
+<div>
+  os {{ os | custom:2}}
+</div>
+<div>
+  New <input type="text" #newData> <input type="button" (click)="onNewData(newData.value)">
+</div>
+<div>
+  Search <input type="text" [(ngModel)]="st">
+</div>
+<div>
+  <ul>
+    <li *ngFor="let mob of mobiles| dataFilter:st">{{mob}}</li>
+  </ul>
+</div>
