@@ -27,6 +27,12 @@ export class PipesComponent implements OnInit {
     'WebOs'
   ];
 
+  prom = new Promise<string>((res, rej) => {
+    setTimeout(() => {
+      res('Android');
+    }, 1500);
+  });
+
   constructor() {
     this.money = 45;
     this.dt = new Date();

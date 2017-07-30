@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" #nm/>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" #age/>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" #mob/>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" (click)="postData(nm.value, age.value, mob.value)"/>
+  </div>
+</div>

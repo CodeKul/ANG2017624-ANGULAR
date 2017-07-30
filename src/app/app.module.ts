@@ -1,3 +1,4 @@
+import { HeavyService } from './http/heavy.service';
 import { WalletService } from './services/wallet.service';
 import { RemoteService } from './services/remote.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -31,6 +32,7 @@ import { DataDrivenComponent } from './forms/data-driven.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipe } from './pipes/custom.pipe';
 import { DataFilterPipe } from './pipes/data-filter.pipe';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { DataFilterPipe } from './pipes/data-filter.pipe';
     DataDrivenComponent,
     PipesComponent,
     CustomPipe,
-    DataFilterPipe
+    DataFilterPipe,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,7 @@ import { DataFilterPipe } from './pipes/data-filter.pipe';
     HttpModule,
     ReactiveFormsModule
   ],
-  providers: [RemoteService, WalletService],
+  providers: [RemoteService, WalletService, HeavyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
