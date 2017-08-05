@@ -1,3 +1,4 @@
+import { JokeService } from './joke.service';
 import { HeavyService } from './heavy.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,17 +11,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpComponent implements OnInit {
 
+  jk: string;
   constructor(
-    private heavy: HeavyService
+    private jkSer: JokeService
   ) {
   }
 
   ngOnInit() {
-    this.heavy.processImage(i => {
-      console.log(`${i}`);
-    });
+
   }
 
   postData(nm: string, age: string, mob: string) {
+    this.jkSer.postData({
+      nm: nm, age: age, mob: mob
+    }, res => {
+      this.jk = `data poseted successfully`;
+    });
+  }
+
+  randmJk() {
+    this.jkSer.randomJoke(joke => {
+      console.log(joke);
+      this.jk = joke.value.joke;
+    });
   }
 }

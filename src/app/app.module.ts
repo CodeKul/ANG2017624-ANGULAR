@@ -1,3 +1,4 @@
+import { JokeService } from './http/joke.service';
 import { HeavyService } from './http/heavy.service';
 import { WalletService } from './services/wallet.service';
 import { RemoteService } from './services/remote.service';
@@ -70,7 +71,7 @@ import { HttpComponent } from './http/http.component';
     HttpModule,
     ReactiveFormsModule
   ],
-  providers: [RemoteService, WalletService, HeavyService],
+  providers: [RemoteService, WalletService, HeavyService, JokeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

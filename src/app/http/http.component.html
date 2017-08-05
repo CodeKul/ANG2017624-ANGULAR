@@ -1,20 +1,19 @@
-<div class="row">
-  <div class="col-md-12">
-    <input type="text" #nm/>
+<div class="row"> 
+  <div class="col-md-12 jumbotron">
+    <h3>{{jk}}</h3>
   </div>
 </div>
-<div class="row">
+<div class="row"> 
   <div class="col-md-12">
-    <input type="text" #age/>
+    <input type="button" value="Random" class="btn btn-primary" (click)="randmJk()">
   </div>
 </div>
-<div class="row">
+
+<div class="row"> 
   <div class="col-md-12">
-    <input type="text" #mob/>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <input type="button" (click)="postData(nm.value, age.value, mob.value)"/>
+    <input type="text" #nm>
+    <input type="text" #age>
+    <input type="text" #mobile>
+    <input type="button" value="Post" class="btn btn-primary" (click)="postData(nm.value, age.value, mobile.value)">
   </div>
 </div>
