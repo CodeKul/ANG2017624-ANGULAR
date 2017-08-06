@@ -34,6 +34,9 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipe } from './pipes/custom.pipe';
 import { DataFilterPipe } from './pipes/data-filter.pipe';
 import { HttpComponent } from './http/http.component';
+import { TabComponent } from './tab/tab.component';
+
+import { Ng2TableModule } from 'ng2-table/ng2-table';
 
 @NgModule({
   declarations: [
@@ -63,13 +66,15 @@ import { HttpComponent } from './http/http.component';
     PipesComponent,
     CustomPipe,
     DataFilterPipe,
-    HttpComponent
+    HttpComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2TableModule
   ],
   providers: [RemoteService, WalletService, HeavyService, JokeService],
   bootstrap: [AppComponent]

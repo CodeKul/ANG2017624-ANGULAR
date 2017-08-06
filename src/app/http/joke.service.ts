@@ -1,6 +1,10 @@
 import { Injectable, Component } from '@angular/core';
 import { Http } from '@angular/http';
 
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
+
 @Injectable()
 export class JokeService {
 
@@ -8,14 +12,14 @@ export class JokeService {
     private http: Http
   ) { }
 
-  randomJoke(resCallback) {
-    this.http.get('httd://api.icndb.com/jokes/random').subscribe(res => {
-      resCallback(res.json());
-    }, this.errHndlr, this.compHndlr);
+  randomJoke(resCallback?): Observable<any> {
+    return this.http.get('http://api.icndb.com/jokes/random')
+      .map(res => res.json())
+      .catch(err => 'Error caught');
   }
 
-  errHndlr(err) {
-    console.log("Error Occured "+err);
+  errHndlr(err: Response) {
+    console.log("Error Occured " + err);
   }
 
   compHndlr() {

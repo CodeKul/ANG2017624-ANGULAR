@@ -1,6 +1,7 @@
 import { JokeService } from './joke.service';
 import { HeavyService } from './heavy.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Rx';
 
 
 
@@ -9,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './http.component.html',
   styleUrls: ['./http.component.css']
 })
-export class HttpComponent implements OnInit {
-
+export class HttpComponent implements OnInit, OnDestroy {
   jk: string;
+  sub: Subscription;
+
+
   constructor(
     private jkSer: JokeService
   ) {
@@ -19,6 +22,10 @@ export class HttpComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 
   postData(nm: string, age: string, mob: string) {
@@ -30,9 +37,13 @@ export class HttpComponent implements OnInit {
   }
 
   randmJk() {
-    this.jkSer.randomJoke(joke => {
-      console.log(joke);
-      this.jk = joke.value.joke;
-    });
+    // this.jkSer.randomJoke(joke => {
+    //   console.log(joke);
+    //   this.jk = joke.value.joke;
+    // });
+
+    this.jkSer.randomJoke().subscribe(res => {
+      console.log(res);
+    }, err => { }, () => { });
   }
 }
